@@ -39,7 +39,7 @@ Main Components
 ```jsx
 import React, { useState } from 'react'
 
-import ReactBulletDnd from 'react-capsules-lib'
+import ReactBulletDnd from 'react-capsules'
 import 'react-capsules-lib/dist/index.css'
 import cancel from './cancel.png'
 
