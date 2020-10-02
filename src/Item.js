@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 
 const Item = ({
   item,
@@ -9,7 +8,7 @@ const Item = ({
   icon,
   onDragStart,
   onDragEnd,
-  position,
+  position
 }) => {
   return (
     <div
@@ -19,7 +18,7 @@ const Item = ({
         display: 'flex',
         flexDirection: 'row',
         margin: '5px',
-        alignItems: 'center',
+        alignItems: 'center'
       }}
       onDragStart={(e) => onDragStart(e, position)}
       onDragEnter={(e) => onDragEnter(e, position)}
@@ -30,18 +29,18 @@ const Item = ({
       <div style={{ display: 'inline' }}> {item} </div>
       <img
         src={icon}
-        alt="icon"
+        alt='icon'
         style={{
           width: '10px',
           height: '10px',
           backgroundColor: '#DDDDDD',
           padding: '5dp',
           cursor: 'pointer',
-          marginLeft: '10px',
+          marginLeft: '10px'
         }}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Item;
+export default Item
