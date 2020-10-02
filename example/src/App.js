@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-
 import ReactBulletDnd from 'react-capsules-lib'
-import 'react-capsules-lib/dist/index.css'
 import cancel from "./cancel.png";
 
 const App = () => {
@@ -16,9 +14,7 @@ const App = () => {
   ]);
 
   const onItemAdded = (item) => {
-    const copyItems = JSON.parse(JSON.stringify(items));
-    copyItems.push(item);
-    setItems(copyItems);
+    setItems([...items, item]);
   };
 
   return (
