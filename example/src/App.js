@@ -16,7 +16,6 @@ const App = () => {
   ]);
 
   const onItemAdded = (item) => {
-    console.log(item);
     const copyItems = JSON.parse(JSON.stringify(items));
     copyItems.push(item);
     setItems(copyItems);

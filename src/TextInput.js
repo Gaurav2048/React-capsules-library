@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 const TextInput = ({ style, addItem }) => {
   const [newItem, setNewItem] = useState('')
   const keyDownHandler = (e) => {
-    console.log(newItem)
     if (e.keyCode === 13 && typeof addItem === 'function') {
       addItem(newItem)
       setNewItem('')
