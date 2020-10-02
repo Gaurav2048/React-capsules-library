@@ -7,7 +7,13 @@ const ReactBulletDnd = ({ children, style, data, set }) => {
   const draggingItemIndex = useRef(null)
   const draggEnterIndex = useRef(null)
 
-  const onClick = (e) => {}
+  const removeItem = (item) => {
+    const filtered = data.filter((_item) => {
+      return _item !== item
+    })
+
+    set(filtered)
+  }
 
   const onDragStart = (e, index) => {
     draggingItem.current = data[index]
@@ -37,7 +43,7 @@ const ReactBulletDnd = ({ children, style, data, set }) => {
         {React.Children.map(children, (child) => {
           if (child.type.name !== 'TextInput') {
             return React.cloneElement(child, {
-              onClick,
+              onClick: removeItem,
               onDragEnter,
               onDragStart,
               onDragEnd

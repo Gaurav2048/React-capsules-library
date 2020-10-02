@@ -12,7 +12,6 @@ const Item = ({
 }) => {
   return (
     <div
-      onClick={(e) => onClick(e)}
       style={{
         ...style,
         display: 'flex',
@@ -38,6 +37,7 @@ const Item = ({
           cursor: 'pointer',
           marginLeft: '10px'
         }}
+        onClick={() => onClick(item)}
       />
     </div>
   )
